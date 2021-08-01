@@ -1,0 +1,234 @@
+:root{
+    --symbolsc: rgb(182, 202, 212); 
+    --numbc: rgb(238, 231, 231);
+    --f-size: 2rem;
+    --f-wei: 900;
+    --paddtop: 14px;
+    --brdrs: solid darkgray 2px;
+}
+
+/* Sono sicuro che vi fosse un modo meno verboso di farlo ma questo è quello che ho trovato più
+intuitivo. Non credo di essere riuscito a prendere bene certi colori o misure dei bordi. */
+
+
+.calc{
+    width: 400px;
+    border: solid 0.1px white;
+    border-radius: 8px;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: repeat(6, 70px);
+    grid-template-areas: "display display display display"
+                         "plus minus multi divi"
+                         "seven eight nine equal"
+                         "four five six equal"
+                         "one two three equal"
+                         "zero point reset equal";
+}
+
+.display{
+    grid-area: display;
+    background-color: rgb(35, 36, 61);
+    margin: 0;
+    color: white;
+    font-size:var(--f-size);
+    font-weight: var(--f-wei);  
+    text-align: right;
+    padding-top: var(--paddtop);
+    padding-right: 10px;
+}
+
+.plus{
+    grid-area: plus;
+    background-color: var(--symbolsc);
+    margin: 0;
+    border: var(--brdrs);
+    text-align: center;
+    padding-top: var(--paddtop);
+    font-size:var(--f-size);
+    font-weight: var(--f-wei);
+    border-left: hidden;   
+}
+
+.minus{
+    grid-area: minus;
+    background-color: var(--symbolsc);
+    margin: 0;
+    border: var(--brdrs);
+    text-align: center;
+    padding-top: var(--paddtop);
+    font-size:var(--f-size);
+    font-weight: var(--f-wei);  
+}
+
+.multi{
+    grid-area: multi;
+    background-color: var(--symbolsc);
+    margin: 0;
+    border: var(--brdrs);
+    text-align: center;
+    padding-top: 14px;
+    font-size:var(--f-size);
+    font-weight: var(--f-wei);
+}
+
+.divi{
+    grid-area: divi;
+    background-color: var(--symbolsc);
+    margin: 0;
+    border: var(--brdrs);
+    text-align: center;
+    padding-top: 14px;
+    font-size:var(--f-size);
+    font-weight: var(--f-wei);
+    border-right: hidden;
+}
+
+.equal{
+    grid-area: equal;
+    background-color: salmon;
+    margin: 0;
+    font-size:var(--f-size);
+    font-weight: var(--f-wei);
+    text-align: center;
+    line-height: 275px;
+}
+
+.seven{
+    background-color: var(--numbc);
+    grid-area: seven;
+    margin: 0;
+    border: var(--brdrs);
+    text-align: center;
+    padding-top: var(--paddtop);
+    font-size:var(--f-size);
+    font-weight: var(--f-wei);
+    border-left: hidden;
+}
+
+.eight{
+    background-color: var(--numbc);
+    grid-area: eight;
+    margin: 0;
+    border: var(--brdrs);
+    text-align: center;
+    padding-top: var(--paddtop);
+    font-size:var(--f-size);
+    font-weight: var(--f-wei);
+}
+
+.nine{
+    background-color: var(--numbc);
+    grid-area: nine;
+    margin: 0;
+    border: var(--brdrs);
+    text-align: center;
+    padding-top: var(--paddtop);
+    font-size:var(--f-size);
+    font-weight: var(--f-wei);
+}
+
+.four{
+    background-color: var(--numbc);
+    grid-area: four;
+    margin: 0;
+    border: var(--brdrs);
+    text-align: center;
+    padding-top: var(--paddtop);
+    font-size:var(--f-size);
+    font-weight: var(--f-wei);
+    border-left: hidden;
+}
+
+.five{
+    background-color: var(--numbc);
+    grid-area: five;
+    margin: 0;
+    border: var(--brdrs);
+    text-align: center;
+    padding-top: var(--paddtop);
+    font-size:var(--f-size);
+    font-weight: var(--f-wei);
+}
+
+.six{
+    background-color: var(--numbc);
+    grid-area: six;
+    margin: 0;
+    border: var(--brdrs);
+    text-align: center;
+    padding-top: var(--paddtop);
+    font-size:var(--f-size);
+    font-weight: var(--f-wei);
+}
+
+.one{
+    background-color: var(--numbc);
+    grid-area: one;
+    margin: 0;
+    border: var(--brdrs);
+    text-align: center;
+    padding-top: var(--paddtop);
+    font-size:var(--f-size);
+    font-weight: var(--f-wei);
+    border-left: hidden;
+}
+
+.two{
+    background-color: var(--numbc);
+    grid-area: two;
+    margin: 0;
+    border: var(--brdrs);
+    text-align: center;
+    padding-top: var(--paddtop);
+    font-size:var(--f-size);
+    font-weight: var(--f-wei);
+}
+
+.three{
+    background-color: var(--numbc);
+    grid-area: three;
+    margin: 0;
+    border: var(--brdrs);
+    text-align: center;
+    padding-top: var(--paddtop);
+    font-size:var(--f-size);
+    font-weight: var(--f-wei);
+}
+
+.zero{
+    background-color: var(--numbc);
+    grid-area: zero;
+    margin: 0;
+    border: var(--brdrs);
+    text-align: center;
+    padding-top: var(--paddtop);
+    font-size:var(--f-size);
+    font-weight: var(--f-wei);
+    border-left: hidden;
+}
+
+.point{
+    background-color: var(--numbc);
+    grid-area: point;
+    margin: 0;
+    border: var(--brdrs);
+    text-align: center;
+    padding-top: var(--paddtop);
+    font-size:var(--f-size);
+    font-weight: var(--f-wei);
+}
+
+.reset{
+    background-color: var(--numbc);
+    grid-area: reset;
+    margin: 0;
+    border: var(--brdrs);
+    text-align: center;
+    padding-top: var(--paddtop);
+    font-size:var(--f-size);
+    font-weight: var(--f-wei);
+}
+
+

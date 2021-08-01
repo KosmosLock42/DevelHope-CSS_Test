@@ -1,0 +1,64 @@
+/* PREAMBOLI */
+
+header{
+    justify-content: center;
+    color: blue;
+    padding-bottom: 5em;
+    display: flex;
+    justify-content: center;
+}
+
+body{
+    margin: 0;
+    background-color: rgb(228, 148, 228);
+}
+
+/* Tabella con righe */
+
+main{
+    display: flex;
+    justify-content: center;
+    gap: 5em;
+}
+
+.expandable{
+    color: cyan;
+    visibility: collapse;
+}
+
+/* Il tasto */
+
+
+
+
+input{
+    display: none;
+}
+
+
+
+label::after{
+    content: "Mostra Righe";
+    background-color: #ff8888;
+    display: block;
+    transition: 1s;
+    width: 60px;
+    height: 40px;
+}
+
+
+input:checked ~ * .expandable{
+visibility: visible;
+
+}
+
+input:checked ~ label:after{
+    background-color: #88ff88;
+    content: "Nascondi Righe"; 
+}
+
+label{
+    border: darkblue 3px solid;
+    width: 60px;
+    height: 40px;
+}

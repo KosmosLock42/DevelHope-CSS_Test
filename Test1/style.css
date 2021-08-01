@@ -1,0 +1,56 @@
+:root{
+    --main-bg-color: rgb(58, 55, 55);
+    --alt-color: rgb(62, 59, 236);
+    --borders: 50%;
+    --margin: 0;
+    --thirdcolor: rgb(100, 17, 100);
+    --picwid: 200px;
+    --pichei: auto;
+    --spacing: 3em;
+}
+
+body{
+    background-color: var(--main-bg-color) ;
+}
+
+
+header{
+    display: flex;
+    justify-content: center;
+    padding-bottom: var(--spacing);
+    color: var(--alt-color);
+}
+
+
+img{
+    width: var(--picwid);
+    height: var(--pichei);
+    border-radius: var(--borders);
+}
+
+
+.gallery{
+    display: flex;
+    justify-content: space-around;
+    border: 4px solid var(--alt-color);
+    margin-bottom: var(--spacing);
+    background-color: var(--thirdcolor);
+}
+
+
+.writings{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border: 6px dotted var(--thirdcolor) ;  
+    background-color: var(--alt-color); 
+    color: var(--main-bg-color);
+}
+
+.writings>input{
+    color: var(--alt-color);
+    border-radius: var(--borders);
+    width: var(--picwid);
+    height: var(--picwid);
+    background-color: var(--thirdcolor);
+}
